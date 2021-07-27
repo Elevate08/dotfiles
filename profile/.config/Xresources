@@ -1,0 +1,39 @@
+!! Colorscheme
+*.alpha: 0.95
+*.alphaUnfocussed: 0.75
+*.font: monospace:size=10:antialias=true:autohint=true
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+
+*.color0:       #131313
+*.color1:       #ff3333
+*.color2:       #4dff4d
+*.color3:       #fcb514
+*.color4:       #3333ff
+*.color5:       #a31aff
+*.color6:       #66d9ff
+*.color7:       #ffffff
+*.color8:       #4e5156
+*.color9:       #cc6666
+*.color10:      #85bf4f
+*.color11:      #fcb514
+*.color12:      #81a2be
+*.color13:      #b294bb
+*.color14:      #8abeb7
+*.color15:      #83868a
+
+!! dmenu Colors (xresources patch required)
+dmenu.background: #000000
+dmenu.foreground: #fcb514
+dmenu.selbackground: #fcb514
+dmenu.selforeground: #000000
+
+dwm.normbordercolor:    #000000
+dwm.normbgcolor:        #000000
+dwm.normfgcolor:        #fcb514
+dwm.selbgcolor:         #fcb514
+dwm.selfgcolor:         #000000
+dwm.selbordercolor:     #fcb514

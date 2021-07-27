@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case $BUTTON in
+    1) notify-send "🖥 CPU hogs" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)" ;;
+    3) notify-send "🖥 CPU module " "\- Shows CPU temperature.
+- Click to show intensive processes.
+- % is of single core." ;;
+esac
+
+if sensors | grep 'Core 0' >/dev/null
+then
+    sensors | awk '/Core 0/ {print "🌡" $3 " " }'
+elif sensors | grep Tdie >/dev/null
+then
+    sensors | awk '/Tdie/ {print "🌡" $2 " "}'
+fi

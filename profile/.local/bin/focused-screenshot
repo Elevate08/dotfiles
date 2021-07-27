@@ -1,0 +1,8 @@
+#!/bin/bash
+scrot '%F_%H%M%S.png' -e 'mv $f ~/Pictures/screenshots/' -u
+if [ $? -eq 0 ]
+then
+    kdialog --passivepopup 'Screenshot saved to ~/Pictures/screenshots/'
+else
+    kdialog --passivepopup 'No Screenshot Taken'
+fi

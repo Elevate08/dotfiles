@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = elevate
+	email = 3460250+Elevate08@users.noreply.github.com
+	signingkey = 4924BCFB431CE950
+[pull]
+	rebase = false
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
