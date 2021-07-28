@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = elevate
 	email = 3460250+Elevate08@users.noreply.github.com
-	signingkey = 4924BCFB431CE950
+	signingkey = 848456E2CEA17CDE
 [pull]
 	rebase = false
 [commit]
