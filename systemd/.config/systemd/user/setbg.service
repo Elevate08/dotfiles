@@ -1,0 +1,10 @@
+[Unit]
+Description=Set Backround
+
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=%h/.local/bin/setbg
+
+[Install]
+WantedBy=default.target

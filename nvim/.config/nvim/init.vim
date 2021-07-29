@@ -14,7 +14,6 @@ filetype plugin indent on
     set noerrorbells
     set autoread
     set spelllang=en_us
-    " set spell
     set wildmenu
     set encoding=UTF-8
     set backspace=indent,eol,start  " Make sure backspace works
