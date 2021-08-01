@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-# zsh profile file. Runs on login. Environmental variables are set here.
-
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$HOME/.cache/nvim/lspconfig/"
