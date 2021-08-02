@@ -171,3 +171,4 @@ let g:completion_enable_fuzzy_match = 1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set completeopt=menuone,noinsert,noselect
+source $XDG_CONFIG_HOME/nvim/diagnostics.vim
