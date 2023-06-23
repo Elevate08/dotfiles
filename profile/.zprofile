@@ -14,7 +14,7 @@ export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
 # SSH Environment
-eval $(keychain -q --eval id_rsa)
+# eval $(keychain -q --eval id_rsa)
 
 # Default programs:
 export EDITOR="nvim"
@@ -108,16 +108,3 @@ ex=🎯:\
 *.part=💔:\
 *.torrent=🔽:\
 "
-
-commitDotFiles() {
-    pushd $DOTFILES
-    pushd personal
-    git add .
-    git commit -m "autocommit"
-    git push origin master
-    popd
-    git add .
-    git commit -m "autocommit"
-    git push origin master
-    popd
-}
