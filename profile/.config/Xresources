@@ -1,6 +1,6 @@
 !! Colorscheme
-*.alpha: 0.95
-*.alphaUnfocussed: 0.75
+*.alpha: 0.98
+*.alphaUnfocussed: 0.90
 *.font: monospace:size=10:antialias=true:autohint=true
 
 ! special

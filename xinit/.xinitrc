@@ -2,9 +2,10 @@
 
 # xinitrc runs automatically when you run startx.
 
-xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/Xresources
-. ~/.xprofile
+# xrandr --dpi 96
+# xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/Xresources
+# . ~/.xprofile
 
-while :; do
-    ssh-agent dwm
-done
+# while :; do
+#     ssh-agent dwm
+# done
