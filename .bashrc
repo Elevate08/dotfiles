@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $(tty) == /dev/tty1 ]] && exec Hyprland
+[[ $(tty) == /dev/tty3 ]] && exec Hyprland
 
 [[ $- != *i* ]] && return
 
