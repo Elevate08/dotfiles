@@ -1,0 +1,82 @@
+* {
+  border: none;
+  font-family: "Hack Nerd Font", "Symbols Nerd Font Mono";
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 0px;
+  color: @theme_text_color;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-arch,
+#workspaces {
+  background-color: @theme_base_color;
+  padding-top: 0px;
+  padding-left: 5px;
+}
+
+#workspaces {
+  padding-right: 15px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#workspaces button {
+  background: @theme_base_color;
+}
+
+#backlight {
+  background-color: @theme_base_color;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#battery,
+#idle_inhibitor {
+  background-color: @theme_base_color;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+#wireplumber {
+  background-color: @theme_base_color;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+#tray {
+  background-color: @theme_base_color;
+  padding-left: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#clock {
+  border-radius: 20px;
+  background-color: @theme_base_color;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#group-power {
+  background-color: @theme_base_color;
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#custom-notify {
+  background-color: @theme_base_color;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#quit,
+#lock,
+#reboot,
+#power {
+  padding-left: 5px;
+  padding-right: 5px;
+}

@@ -1,0 +1,15 @@
+show=drun
+allow_images=true
+image_size=24
+hide_scroll=true
+matching=fuzzy
+insensitive=true
+key_up=k
+key_down=j
+key_left=h
+key_right=l
+width=400px
+height=300px
+location=2
+y=400
+prompt=Select an Application

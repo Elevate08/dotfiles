@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
+
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1000 1000"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg2"
+   sodipodi:docname="lock.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs2" /><sodipodi:namedview
+   id="namedview2"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="1.235"
+   inkscape:cx="499.59514"
+   inkscape:cy="500"
+   inkscape:window-width="2256"
+   inkscape:window-height="1472"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g1" />
+<metadata
+   id="metadata1"> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+<g
+   id="g2"><g
+     id="g1"><path
+       d="m 466.66251,491.67498 h 66.67498 v -25.01247 c 0,-9.20429 -3.25518,-17.06161 -9.76553,-23.57196 -6.51035,-6.51036 -14.36767,-9.76553 -23.57196,-9.76553 -9.20429,0 -17.06161,3.25517 -23.57196,9.76553 -6.51036,6.51034 -9.76553,14.36767 -9.76553,23.57196 z M 575,504.17186 v 75 c 0,3.47967 -1.21601,6.41681 -3.64804,8.84884 -2.43203,2.43203 -5.38788,3.64804 -8.84884,3.64804 H 437.49688 c -3.47967,0 -6.41681,-1.21601 -8.84884,-3.64804 C 426.21601,585.58867 425,582.63282 425,579.17186 v -74.99999 c 0,-3.47968 1.21601,-6.41682 3.64804,-8.84884 2.43203,-2.43204 5.38788,-3.64805 8.84884,-3.64805 h 4.17186 v -25.01247 c 0,-15.97655 5.72463,-29.68945 17.19257,-41.13869 11.44924,-11.46794 25.16214,-17.19256 41.13869,-17.19256 15.97655,0 29.68945,5.72462 41.13869,17.19256 11.46794,11.46795 17.19257,25.18085 17.19257,41.13869 v 24.99376 h 4.17186 c 3.47967,0 6.41681,1.21602 8.84884,3.64804 2.43203,2.43204 3.64804,5.38788 3.64804,8.86755 z"
+       id="path1"
+       style="stroke-width:0.187079" /></g></g>
+</svg>

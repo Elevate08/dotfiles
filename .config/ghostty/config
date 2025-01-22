@@ -1,0 +1,5 @@
+auto-update = off
+custom-shader-animation = false
+confirm-close-surface = false
+window-decoration = false
+font-family = "Hack Nerd Font"

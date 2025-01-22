@@ -1,0 +1,30 @@
+apiVersion: ""
+generated: "0001-01-01T00:00:00Z"
+repositories:
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: immich
+  pass_credentials_all: false
+  password: ""
+  url: https://immich-app.github.io/immich-charts
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: awx-operator
+  pass_credentials_all: false
+  password: ""
+  url: https://ansible-community.github.io/awx-operator-helm/
+  username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: coroot
+  pass_credentials_all: false
+  password: ""
+  url: https://coroot.github.io/helm-charts
+  username: ""

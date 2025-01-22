@@ -1,0 +1,257 @@
+{
+  // -------------------------------------------------------------------------
+  // Global configuration
+  // -------------------------------------------------------------------------
+  "layer": "top",
+  "position": "top",
+  "height": 27,
+  // "modules-left": ["wlr/workspaces", "custom/window"],
+  "modules-left": [
+    "wlr/workspaces",
+    "hyprland/workspaces"
+  ],
+  "modules-center": ["custom/window"],
+  "modules-right": [
+    // "custom/primary",
+    // "custom/clipboard",
+    "idle_inhibitor",
+    "custom/dunst",
+    "network",
+    "bluetooth",
+    // "cpu",
+    // "temperature",
+    // "memory",
+    // "disk",
+    // "custom/keyboard-layout",
+    "backlight",
+    // "pulseaudio",
+    "wireplumber",
+    "battery",
+    // "custom/pacman",
+    // "custom/uptime",
+    // "tray",
+    "clock"
+    // "clock#date",
+    // "clock#time"
+  ],
+  // -------------------------------------------------------------------------
+  // Modules
+  // -------------------------------------------------------------------------
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-click": "activate",
+    "show-special": false,
+    "ignore-workspaces": [
+      "(special:)?special:scratch_term"
+    ],
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": " {status}",
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager",
+    "on-click-right": "bluetooth toggle"
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "interval": 2,
+    "on-scroll-up": "brightnessctl set +2%",
+    "on-scroll-down": "brightnessctl set 2%-"
+  },
+  "battery": {
+    "interval": 3,
+    "states": {
+      "warning": 25,
+      "critical": 15
+    },
+    // Connected to AC
+    "format": " {icon}  {capacity}%", // Icon: bolt
+    // Not connected to AC
+    "format-discharging": "{icon}  {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": true
+  },
+  "clock": {
+      "interval": 1,
+      "format": " {:%H:%M %S}",
+      "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+                  "mode"          : "month",
+                  "mode-mon-col"  : 3,
+                  "weeks-pos"     : "right",
+                  "on-scroll"     : 1,
+                  "on-click-right": "mode",
+                  "format": {
+                            "months":     "<span color='#ffead3'><b>{}</b></span>",
+                            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                            }
+                  },
+      "actions":  {
+                  "on-click-right": "mode",
+                  "on-click-forward": "tz_up",
+                  "on-click-backward": "tz_down",
+                  "on-scroll-up": "shift_up",
+                  "on-scroll-down": "shift_down"
+                  }
+  },
+  "clock#time": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip": false
+    // "timezone": "Europe/Warsaw"
+  },
+  "clock#date": {
+    "interval": 10,
+    "format": " {:%Y/%m/%d(%a)}", // Icon: calendar-alt
+    "tooltip-format": "{:%Y %B %e (%A)}",
+    "locale": "en_US.UTF-8"
+    // "timezone": "Europe/Warsaw"
+  },
+  "cpu": {
+    "interval": 3,
+    "format": " {usage}% ({load})", // Icon: microchip
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "memory": {
+    "interval": 3,
+    "format": " {}%", // Icon: memory
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+  "disk": {
+    "format": "\uf0a0: {percentage_used}%",
+    "path": "/"
+  },
+  "network": {
+    "interval": 3,
+    "format-wifi": "  {essid}", // Icon: wifi
+    "format-ethernet": " {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+    "format-disconnected": "⚠  Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr} (signal: {signalStrength}%)",
+    "on-click": "alacritty --class nmtui -e nmtui"
+  },
+  "pulseaudio": {
+    "scroll-step": 2,
+    "format": "{icon}  {volume}%",
+    "format-muted": " Muted", // Icon: volume-mute
+    "format-icons": {
+      "headphones": "", // Icon: headphones
+      "handsfree": "", // Icon: headset
+      "headset": "", // Icon: headset
+      "phone": "", // Icon: phone
+      "portable": "", // Icon: phone
+      "car": "", // Icon: car
+      "default": [
+        "",
+        ""
+      ] // Icons: volume-down, volume-up
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": true
+  },
+  "wireplumber": {
+    "scroll-step": 0.2,
+    "max-volume": 150,
+    "format": "{icon}  {volume}%",
+    "format-muted": " Muted", // Icon: volume-mute
+    "format-icons": {
+      "headphones": "", // Icon: headphones
+      "handsfree": "", // Icon: headset
+      "headset": "", // Icon: headset
+      "phone": "", // Icon: phone
+      "portable": "", // Icon: phone
+      "car": "", // Icon: car
+      "default": [
+        "",
+        ""
+      ] // Icons: volume-down, volume-up
+    },
+    "on-click": "helvum",
+    "tooltip": true
+  },
+  "temperature": {
+    "critical-threshold": 75,
+    "interval": 3,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "", // Icon: temperature-empty
+      "", // Icon: temperature-quarter
+      "", // Icon: temperature-half
+      "", // Icon: temperature-three-quarters
+      "" // Icon: temperature-full
+    ],
+    "tooltip": true
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  // -------------------------------------------------------------------------
+  // Custom Modules
+  // -------------------------------------------------------------------------
+  "custom/primary": {
+    "format": "󿩚{}",
+    "exec": "~/.config/waybar/scripts/clipboard.sh --primary",
+    "on-click": "~/.config/waybar/scripts/clipboard.sh --toggle; pkill -SIGRTMIN+8 waybar",
+    "restart-interval": 2,
+    "escape": true
+  },
+  "custom/clipboard": {
+    "format": "󿚑{}",
+    "exec": "~/.config/waybar/scripts/clipboard.sh --clipboard",
+    "on-click": "~/.config/waybar/scripts/clipboard.sh --toggle; pkill -SIGRTMIN+8 waybar",
+    "restart-interval": 2,
+    "escape": true
+  },
+  "custom/dunst": {
+    "format": "{} ",
+    "exec": "~/.config/waybar/scripts/dunst.sh",
+    "on-click": "dunstctl set-paused toggle",
+    "restart-interval": 1
+  },
+  "custom/pacman": {
+    "format": " {} update available",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "test $(checkupdates | wc -l) -ne 0",
+    "interval": 3600,
+    "on-click": "checkupdates; pkill -SIGRTMIN+8 waybar"
+  },
+  "custom/window": {
+    "exec": "~/.config/waybar/scripts/window_title.sh",
+    "interval": 1
+  },
+  "custom/uptime": {
+    "format": " {}",
+    "exec": "uptime | awk '{print $3}'|sed 's/,//'",
+    "interval": 60
+  }
+}
