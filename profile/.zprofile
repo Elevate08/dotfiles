@@ -108,16 +108,3 @@ ex=🎯:\
 *.part=💔:\
 *.torrent=🔽:\
 "
-
-commitDotFiles() {
-    pushd $DOTFILES
-    pushd personal
-    git add .
-    git commit -m "autocommit"
-    git push origin master
-    popd
-    git add .
-    git commit -m "autocommit"
-    git push origin master
-    popd
-}
