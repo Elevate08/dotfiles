@@ -1,0 +1,10 @@
+return {
+  {
+    "lazyvim.plugins.extras.linting.eslint",
+    opts = {
+      plugins = {
+        "ota-meshi/eslint-plugin-yml",
+      },
+    },
+  },
+}

@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $(tty) == /dev/tty3 ]] && exec Hyprland
+#[[ $(tty) == /dev/tty3 ]] && exec Hyprland
 
 [[ $- != *i* ]] && return
 
@@ -20,7 +20,7 @@ WHITE="$(tput setaf 7)"
 #PS1='(${YELLOW}\t${WHITE}) [${YELLOW}\u${WHITE}@${YELLOW}\h ${WHITE}\W${WHITE}]$YELLOW$ $WHITE'
 #PS1='\[$YELLOW\](\t) \[\e[0m\][\[$GREEN\]\u\[\e[0m\]@\[$RED\]\h \[$MAGENTA\]\W\[\e[0m\]]\$ \[\e[0m\]'
 
-export PATH="$PATH:$HOME/.local/bin:/opt/android-sdk/platform-tools"
+export PATH="$PATH:$HOME/.local/bin:/opt/android-sdk/platform-tools:$HOME/.cargo/bin"
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export HISTCONTROL=ignoreboth:erasedups
@@ -34,3 +34,5 @@ export EDITOR=/usr/bin/nvim
 WLR_NO_HARDWARE_CURSORS=1
 
 alias vim='/usr/bin/nvim'
+
+if [ "$TMUX" = "" ]; then tmux; fi
