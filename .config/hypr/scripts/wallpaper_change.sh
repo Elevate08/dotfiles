@@ -1,15 +1,7 @@
-wallpaperDir=~/Documents/Pictures/Wallpapers
+wallpaperDir=~/Documents/Pictures/wallpapers/
 monitor=($(hyprctl monitors | grep Monitor | awk '{print $2}'))
 wal=$(find ${wallpaperDir} -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
 cache=""
-
-#if [ -d ${wallpaperDir} ]; then
-#  cd ${wallpaperDir}
-#  git pull
-#else
-#  ${pkgs.git}/bin/git clone ${wallpaperGit} ${wallpaperDir}
-#  chown -R ${username}:users ${wallpaperDir}
-#fi
 
 while true; do
 	if [[ $cache == $wal ]]; then
@@ -27,5 +19,6 @@ while true; do
 			hyprctl hyprpaper wallpaper "${m},${contain}${wal}"
 		done
 	fi
-	sleep 900
+  # Change wallpaper every 2 hours
+	sleep 7200
 done
